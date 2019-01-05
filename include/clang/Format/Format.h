@@ -1001,6 +1001,20 @@ struct FormatStyle {
   /// \endcode
   bool Cpp11BracedListStyle;
 
+  /// \brief If there is a break after the opening parenthesis, also break
+  /// before the closing parenthesis
+  /// \code
+  ///   true:
+  ///   someLongFunction(
+  ///       argument1, argument2
+  ///   );
+  ///
+  ///   false:
+  ///   someLongFunction(
+  ///       argument1, argument2);
+  /// \endcode
+  bool DanglingParenthesis;
+
   /// If ``true``, analyze the formatted file for the most common
   /// alignment of ``&`` and ``*``.
   /// Pointer and reference alignment styles are going to be updated according
