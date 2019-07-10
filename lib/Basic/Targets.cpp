@@ -247,9 +247,6 @@ TargetInfo *AllocateTarget(const llvm::Triple &Triple,
   case llvm::Triple::msp430:
     return new MSP430TargetInfo(Triple, Opts);
 
-  case llvm::Triple::nios2:
-    return new LinuxTargetInfo<Nios2TargetInfo>(Triple, Opts);
-
   case llvm::Triple::mips:
     switch (os) {
     case llvm::Triple::Linux:
